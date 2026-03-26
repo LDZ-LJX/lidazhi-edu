@@ -149,7 +149,25 @@ body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;color:
   </div>
 </div>
 
-<div class="footer">个性化立志服务 | 帮助青少年找到人生方向</div>
+<div class="footer">
+  个性化立志服务 | 帮助青少年找到人生方向
+  <br><span id="visit-counter" style="font-size:11px;color:#bbb"></span>
+</div>
+
+<script>
+(function(){
+  var key = 'lidazhi_visit_count';
+  var pageKey = 'lidazhi_visited_' + location.pathname;
+  var count = parseInt(localStorage.getItem(key) || '0', 10);
+  if (!sessionStorage.getItem(pageKey)) {
+    count++;
+    localStorage.setItem(key, count);
+    sessionStorage.setItem(pageKey, '1');
+  }
+  var el = document.getElementById('visit-counter');
+  if (el) el.textContent = '本设备累计访问 ' + count + ' 次';
+})();
+</script>
 
 </body>
 </html>
