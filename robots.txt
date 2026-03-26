@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+Sitemap: https://lidazhiai.cn/sitemap.xml
+Sitemap: https://ldz-ljx.github.io/lidazhi-edu/sitemap.xml
